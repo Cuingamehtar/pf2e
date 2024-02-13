@@ -3,45 +3,6 @@
     "img": "systems/pf2e/icons/default-icons/npc.svg",
     "items": [
         {
-            "_id": "93s2yi7nb08mzhdu",
-            "flags": {
-                "core": {
-                    "sourceId": "Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL"
-                }
-            },
-            "img": "systems/pf2e/icons/conditions/frightened.webp",
-            "name": "Frightened",
-            "sort": 100000,
-            "system": {
-                "description": {
-                    "value": "<p>You're gripped by fear and struggle to control your nerves. The frightened condition always includes a value. You take a status penalty equal to this value to all your checks and DCs. Unless specified otherwise, at the end of each of your turns, the value of your frightened condition decreases by 1.</p>"
-                },
-                "duration": {
-                    "value": 0
-                },
-                "group": null,
-                "overrides": [],
-                "publication": {
-                    "license": "OGL",
-                    "remaster": false,
-                    "title": ""
-                },
-                "references": {
-                    "children": [],
-                    "immunityFrom": [],
-                    "overriddenBy": [],
-                    "overrides": []
-                },
-                "rules": [],
-                "slug": "frightened",
-                "value": {
-                    "isValued": true,
-                    "value": 2
-                }
-            },
-            "type": "condition"
-        },
-        {
             "_id": "gH06P6rp2bswuGya",
             "img": "systems/pf2e/icons/default-icons/melee.svg",
             "name": "Jaws",
@@ -223,7 +184,23 @@
                     "remaster": false,
                     "title": ""
                 },
-                "rules": [],
+                "rules": [
+                    {
+                        "alterations": [
+                            {
+                                "mode": "override",
+                                "property": "badge-value",
+                                "value": 2
+                            }
+                        ],
+                        "key": "GrantItem",
+                        "onDeleteActions": {
+                            "grantee": "restrict"
+                        },
+                        "inMemoryOnly": true,
+                        "uuid": "Compendium.pf2e.conditionitems.Item.Frightened"
+                    }
+                ],
                 "slug": null,
                 "traits": {
                     "rarity": "common",
